@@ -1,0 +1,156 @@
+/*acá tengo mis fuentes*/
+
+.rufina-regular {
+  font-family: "Rufina", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.rufina-bold {
+  font-family: "Rufina", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+.honk {
+  font-family: "Honk", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "MORF" 15,
+    "SHLN" 50;
+}
+
+
+.titulo {
+  background: url(https://as2.ftcdn.net/v2/jpg/02/52/34/75/1000_F_252347511_7vNunhWXrhbuvJ6v7meKytYKWt1CCV59.jpg);
+  border: 0px;
+        display: block;
+        flex-direction: column;
+        padding: 25px;
+        width:100%;
+}
+
+   /*cambié los colores como verde digital. No sé si existe, pero es ese verde tan representativo de lo cibernético, de la mátriz. Creo que más adelante te hablaré de esto, pero una de mis inspiraciones es el ciberfeminismo. Recientemente estuve ojeando el libro Cyberfeminism index de Mindy Seu y por eso surgió esta idea*/ 
+  :root {
+    --color-primary:#1b9901;
+    --color-secondary: #8AE570;
+    --color-tertiary: #6DE54A;
+    --color-quaternary: #51E528;
+    --color-quinary: #AAE398;
+  }
+  
+/*Estaba escribiendo mis comentarios como si fueran en html lo cual fue absolutamente erróneo y no entendí por qué no me funcionaba el código hasta que recordé que estoy en CSS. 
+
+Tomé de unos de los links que compartiste este estilo de letra con esta animación, y duré casi dos días intentando descifrar cómo alterarlo. Hasta que resolví crear dos clases diferentes para dos tamaños de letra. Los llamé el nombre por defecto y los acompañé de la descripción de su tamaño (pequeño y grande)*/
+  
+  .text_shadowsgrande {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
+      9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: calc(2rem + 5vw);
+    text-align: center;
+    padding: 20px;
+    color: var(--color-primary);
+    //color: transparent;
+    animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
+    letter-spacing: 0.4rem;
+  }
+
+/* Intenté reducirlo a la menor cantidad de líneas posible pero son códigos muy largos. La razón de esta diagramación de las palabras es que me inspiré un documento del siglo XIX que tiene una portada característica, en mi opinión, de esa época. Lo relaciono con reportes y documentos de independencia, derechos, descubrimientos, etc. Mira este link: https://www.loc.gov/resource/mss41210.mss41210-005_00343_00370/?sp=21, vas a entender a que me refiero*/
+
+  .text_shadowspequeña {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
+      9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+    font-family: bungee, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: calc(1rem + 3vw);
+    text-align: center;
+    margin: 100px;
+    color: var(--color-primary);
+    //color: transparent;
+    //background-color: white;
+    //background-clip: text;
+    animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
+    letter-spacing: 0.4rem;
+  }
+  
+  @keyframes shadows {
+    0% {      text-shadow: none;    }
+    10% {      text-shadow: 3px 3px 0 var(--color-secondary);
+    }
+    20% {      text-shadow: 3px 3px 0 var(--color-secondary),
+        6px 6px 0 var(--color-tertiary);    }
+    30% {      text-shadow: 3px 3px 0 var(--color-secondary),
+        6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);    }
+    40% {      text-shadow: 3px 3px 0 var(--color-secondary),
+        6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),        12px 12px 0 var(--color-quinary);    }
+    50% {      text-shadow: 3px 3px 0 var(--color-secondary),
+        6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),        12px 12px 0 var(--color-quinary);    }
+    60% {      text-shadow: 3px 3px 0 var(--color-secondary),
+        6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),        12px 12px 0 var(--color-quinary);    }
+    70% {      text-shadow: 3px 3px 0 var(--color-secondary),
+        6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);    }
+    80% {      text-shadow: 3px 3px 0 var(--color-secondary),
+        6px 6px 0 var(--color-tertiary);    }
+    90% {      text-shadow: 3px 3px 0 var(--color-secondary);
+    }
+    100% {      text-shadow: none;    }  }
+  
+  @keyframes move {
+    0% {      transform: translate(0px, 0px);    }
+    40% {      transform: translate(-12px, -12px);    }
+    50% {      transform: translate(-12px, -12px);    }
+    60% {      transform: translate(-12px, -12px);    }
+    100% {      transform: translate(0px, 0px);    }  }
+
+
+.seccion_negra {
+  background-color: black;
+  margin-top: -13%;
+  width: 100%;
+}
+    
+.cuerpodetextosobrenegro {
+background-color: black;
+font-family: "Rufina";
+font-size: 50px;
+font-weight: 700;
+margin-top: 100px;
+padding: 100px;
+color: white;
+}
+
+.palabraenmovimiento {
+font-family: "Honk";
+font-size: 70px;
+animation-name: ladoalado; 
+animation-duration: 10s;
+animation-iteration-count: infinite;
+position: relative;
+margin-top:-100px;
+}
+/* La letra de "nada es estático" me gusta porque es muy rebelde. Actualmente estoy rompiendo mis propios preceptos y abriendome mas a experimentar. Creo que es clave para una editora tener momentos que lo cuestionen todo. */
+
+@keyframes ladoalado {
+ 0% {transform: translateX(-40%);}
+ 50% {transform: translateX(100%);}
+ 100% {transform: translateX(-100%);}
+}
+ /* Esta forma de animar me gustó mucho, la aprendí en YouTube*/
+
+.etnografa {
+background-image: url(https://www.britannica.com/explore/100women/wp-content/uploads/sites/3/2019/02/Margaret-Mead-scaled.jpg);
+margin-top: -13%;
+font-family: "Rufina";
+color: #6DE54A ;
+font-size: 50px;
+font-weight: 700;
+padding: 100px;
+width:100%;
+object-fit: none;
+}
